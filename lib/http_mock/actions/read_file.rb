@@ -1,8 +1,23 @@
 module HttpMock
   module Actions
     class ReadFile
-      def execute(path)
-        File.read(path)
+      class << self
+        def execute(file_path)
+          hash = load_file(file_path)
+          build_mock(hash)
+        end
+
+        private
+
+        def load_file(file_path)
+          Oj.laod(file_path.read)
+        end
+
+        def build_mock(hash)
+          request = HttpMock::Mock::Request.new(hash[:request])
+          response = HttpMock::Mock::Response.new(hash[:response])
+          HttpMock::Mock.new(request, response)
+        end
       end
     end
   end

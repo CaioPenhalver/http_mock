@@ -1,5 +1,3 @@
-require 'pathname'
-
 module HttpMock
   module Actions
     class BuildPath
