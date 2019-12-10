@@ -23,7 +23,7 @@ module HttpMock
         def validate_work_dir_path(absolute_work_dir_path)
           return if absolute_work_dir_path.directory?
 
-          raise HttpMock::Errors::InvalidPath.new(absolute_work_dir_path.to_s)
+          raise HttpMock::Errors::InvalidPath, absolute_work_dir_path.to_s
         end
 
         def validate_file_path(absolute_file_path)

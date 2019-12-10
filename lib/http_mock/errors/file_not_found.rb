@@ -7,4 +7,3 @@ module HttpMock
     end
   end
 end
-

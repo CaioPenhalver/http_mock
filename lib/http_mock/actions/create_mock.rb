@@ -5,7 +5,7 @@ module HttpMock
     class CreateMock
       include WebMock::API
 
-      def execute(mock)
+      def execute(_mock)
         WebMock.enable!
         stub_request(:any, uri_template)
       end
