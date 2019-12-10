@@ -1,9 +1,10 @@
 module HttpMock
-  module Mock
+  module Http
     class Response
       attr_accessor :body, :query_string, :headers, :url, :code
 
-      def initialize()
+      def initialize(hash)
+        hash.each { |f, v| send("#{f}=", v) if respond_to?("#{f}=") }
       end
     end
   end

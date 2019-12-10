@@ -5,6 +5,9 @@ require "http_mock/version"
 require "http_mock/mock"
 require "http_mock/configuration"
 
+require "http_mock/http/request"
+require "http_mock/http/response"
+
 require "http_mock/actions/build_path"
 
 require "http_mock/errors/file_not_found"

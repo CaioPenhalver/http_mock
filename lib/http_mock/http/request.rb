@@ -1,5 +1,5 @@
 module HttpMock
-  module Mock
+  module Http
     class Request
       attr_accessor :body, :query_string, :headers, :url, :method
 
