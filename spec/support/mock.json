@@ -1,0 +1,14 @@
+{
+  "request": {
+    "body": { "property": "value" },
+    "query_string": "param=valuequerystring",
+    "headers": "any header",
+    "url": "http://any.com",
+    "method": "POST"
+  },
+  "response": {
+      "body": { "property": "response" },
+      "headers": "response header",
+      "code": 500
+  }
+}

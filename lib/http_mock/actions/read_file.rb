@@ -14,8 +14,8 @@ module HttpMock
         end
 
         def build_mock(hash)
-          request = HttpMock::Mock::Request.new(hash[:request])
-          response = HttpMock::Mock::Response.new(hash[:response])
+          request = HttpMock::Http::Request.new(hash[:request])
+          response = HttpMock::Http::Response.new(hash[:response])
           HttpMock::Mock.new(request, response)
         end
       end
